@@ -10,10 +10,29 @@ range(3, 4); // [3]
 range(7, 6); // []
 ***********************************************************************/
 
-
+debugger
 function range(start, end) {
-  // Your code here 
+
+  //if start greater than end return empty arr
+  if(start > end) {
+
+    return [];
+
+  }
+  let arr = [start]
+  //create base case
+  if(start === end - 1) {
+
+    return arr;
+  }
+  //create recusrsive step
+  return arr = [...arr, ...range(start + 1, end)];
+
 }
+
+console.log(range(1, 5)); // [1, 2, 3, 4]
+console.log(range(3, 4)); // [3]
+console.log(range(7, 6)); // []
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
