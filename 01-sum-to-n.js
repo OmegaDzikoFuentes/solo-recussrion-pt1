@@ -14,13 +14,12 @@ sumToN(-8)  // returns null
 
 function sumToN(n) {
 
-  //create base case to stop recursion
-  if(n <= 0) {
+  if(n < 0) {
 
     return null;
 
   }
-  //return n plus recurse
+
   return n + sumToN(n - 1);
 
 

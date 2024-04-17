@@ -13,20 +13,24 @@ range(7, 6); // []
 debugger
 function range(start, end) {
 
-  //if start greater than end return empty arr
-  if(start > end) {
+  if(end < start) {
 
     return [];
 
   }
-  let arr = [start]
-  //create base case
-  if(start === end - 1) {
 
-    return arr;
+  let ansArr = [start];
+
+  if( start >= end - 1) {
+
+    return ansArr;
+
   }
-  //create recusrsive step
-  return arr = [...arr, ...range(start + 1, end)];
+
+
+
+  return ansArr.concat(range(start + 1, end));
+
 
 }
 

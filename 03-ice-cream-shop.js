@@ -15,24 +15,20 @@ iceCreamShop([], 'honey lavender'); // false
 
 function iceCreamShop(flavors, favorite) {
 
-  //create base case
-  //if flavors arr contains favorite return true
   if(flavors.length === 0) {
 
     return false;
 
-  };
+  }
 
-  //create recursive step
-  if(flavors.includes(favorite)) {
+  if(flavors[flavors.length - 1] === favorite) {
 
     return true;
-    
+
   }
-  //remove last item
+
   flavors.pop();
 
-  //return recursive func
   return iceCreamShop(flavors, favorite);
 
 }
